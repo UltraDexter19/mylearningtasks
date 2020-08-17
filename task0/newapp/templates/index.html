@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task2</title>
+</head>
+<body>
+	<h2>
+		{% if inv %}
+		  {{ inv }}
+		{% endif %}
+	</h2>
+	<form method="post">
+		<label>Username:</label>
+		<input type="text" name="username"><br>
+		<label>Password:</label>
+		<input type="password" name="password"><br>
+        <button type = "submit">Log In</button>
+		<a href="{% url 'register'%}">Click Here to Register</a>
+		{% csrf_token %}
+
+		
+	</form>
+
+</body>
+</html>
